@@ -1,0 +1,13 @@
+{
+  "name": "restapi",
+  "version": "0.0.1",
+  "description": "test ts rest api dev",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "js-yaml": "^3.8.4",
+    "multer": "^1.3.0"
+  }
+}
