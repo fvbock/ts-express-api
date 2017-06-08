@@ -54,7 +54,7 @@ app.post('/api/sayhello', upload.array(), (request, response) => {
 app.post('/api/config', upload.array(), (request, response) => {
     // Get document, or throw exception on error
     try {
-        let doc = yaml.safeLoad(fs.readFileSync('.fsms.yml', 'utf8'));
+        let doc = yaml.safeLoad(fs.readFileSync('./config/fsms.yml', 'utf8'));
         console.log(doc);
     } catch (e) {
         console.log(e);

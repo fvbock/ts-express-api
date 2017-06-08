@@ -1,0 +1,54 @@
+app_name: catx3
+messages:
+  structured_msg:
+    type: structured
+    template:
+      title: Really?
+      image: http://weknowmemes.com/wp-content/uploads/2012/06/file-me-under-f.jpg
+      text: sub
+      buttons:
+      - type: postback
+        text: Yep - for real!
+        payload: "yes"
+      - type: postback
+        text: Nope - just kidding!
+        payload: "no"
+
+  simple_msg:
+    type: simple
+    template:
+      text: Hello, %s %s, %s
+
+  almost_gone:
+    type: structured
+    template:
+      title: Our guests have almost run out of food
+      text: おかわりお願いします！
+      image: http://www.websophist.com/Hungry_CanYouSpotProblemCatLOL400O.jpg
+      buttons:
+        - type: web_url
+          text: Go feed the kitties
+          url: http://www.websophist.com/Hungry_CanYouSpotProblemCatLOL400O.jpg
+
+  all_gone:
+    type: structured
+    template:
+      title: Hu-man. I need your assistance
+      text: No food left!
+      image: http://www.websophist.com/Hungry_CanYouSpotProblemCatLOL400O.jpg
+      buttons:
+        - type: web_url
+          text: Go feed the kitties
+          url: http://www.websophist.com/Hungry_CanYouSpotProblemCatLOL400O.jpg
+
+  which_cat:
+    type: structured
+    template:
+      title: They need a home
+      text: Which one do you like?
+      image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisqpHFSTxfHDtblMs5yzOuTm7EpWklfpEqKKtbHCcamPOIns-
+      buttons:
+        - type: postback
+          text: The left one
+        - type: postback
+          text: The right one

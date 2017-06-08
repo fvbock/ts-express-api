@@ -1,0 +1,50 @@
+app_name: catx3
+fsms:
+  food:
+    states: |2-
+
+        digraph finite_state_machine {
+              rankdir=LR;
+              node [shape = doublecircle]; is_empty;
+              node [shape = circle];
+              is_empty -> has_food [ label = "place_food" ];
+              has_food -> has_food [ label = "place_food" ];
+              has_food -> is_empty [ label = "all_gone" ];
+        }
+    initial: is_empty
+    event_callbacks:
+      place_food:
+        name: place_food
+        event:
+          name: all_gone
+          delay: 10
+        message:
+          name: almost_gone
+          delay: 6
+      all_gone:
+        name: all_gone
+        message:
+          name: all_gone
+          delay: 0
+
+  rare_cat:
+    states: |2-
+
+        digraph finite_state_machine {
+              rankdir=LR;
+              node [shape = doublecircle]; is_empty;
+              node [shape = circle];
+              no_rare -> rare [ label = "rare_appeared" ];
+              rare -> no_rare [ label = "rare_left" ];
+        }
+    initial: no_rare
+    event_callbacks:
+      rare_appeared:
+        name: rare_appeared
+        event:
+          name: rare_left
+          delay: 30
+        message:
+          name: rare_appeared
+          delay: 0
+          read: rare_you_made_it
