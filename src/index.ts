@@ -59,6 +59,6 @@ app.post('/api/config', upload.array(), (request, response) => {
     } catch (e) {
         console.log(e);
     }
-}
+});
 
 app.listen(3000);
