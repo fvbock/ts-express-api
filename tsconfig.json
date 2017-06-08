@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    // "moduleResolution": "node",
+    // "declaration": true,
+    "baseUrl": ".",
+    "sourceMap": true,
+  },
+    "include": [
+      "src/**/*"
+    ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
