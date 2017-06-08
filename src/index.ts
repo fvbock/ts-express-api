@@ -23,7 +23,7 @@ app.get('/api/sayhello/:name', (request, response) => {
             .send('No string as name');
     } else {
         response.json({
-            "message": name
+            'message': name
         });
     }
 });
